@@ -8,8 +8,20 @@ export const resolversArticle = {
         sortKey, 
         sortValue,
         currentPage,
-        limitItems
+        limitItems,
+        filterKey,
+        filterValue
       } = args;
+
+      // Bộ lọc
+      const find = {
+        deleted: false
+      };
+
+      if(filterKey && filterValue) {
+        find[filterKey] = filterValue;
+      }
+      // Hết Bộ lọc
 
       // Sắp xếp
       const sort = {};
@@ -27,6 +39,7 @@ export const resolversArticle = {
         .find({
           deleted: false
         })
+        .find(find)
         .sort(sort)
         .limit(limitItems)
         .skip(skip);
