@@ -1,3 +1,4 @@
+import { typeDefsUser } from "../resolvers/user.resolver";
 import { typeDefsArticle } from "./article.typeDefs";
 import { typeDefsCategory } from "./category.typeDefs";
 
@@ -6,4 +7,5 @@ import { typeDefsCategory } from "./category.typeDefs";
 export const typeDefs = [
   typeDefsArticle, 
   typeDefsCategory,
+  typeDefsUser,
 ];
