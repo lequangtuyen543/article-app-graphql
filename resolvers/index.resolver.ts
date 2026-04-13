@@ -1,4 +1,4 @@
-import { resolversUser } from "../typeDefs/user.typeDefs";
+import { resolversUser } from "./user.resolver";
 import { resolversArticle } from "./article.resolver";
 import { resolversCategory } from "./category.resolver";
 
